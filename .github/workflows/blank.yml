@@ -1,9 +1,7 @@
 name: CI
-
 on:
   release:
     types: [published]
-
 jobs:
   login:
     runs-on: ubuntu-latest
