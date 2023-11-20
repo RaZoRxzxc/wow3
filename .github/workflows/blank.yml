@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: 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
